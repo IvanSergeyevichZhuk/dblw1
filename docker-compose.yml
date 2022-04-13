@@ -1,0 +1,32 @@
+version: "3.2"
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+        - pgdata:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=sample_db2022_lab1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_SERVER=0.0.0.0
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+  app:
+    build: .
+    command: python code.py
+    environment:
+      - POSTGRES_DB=sample_db2022_lab1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_SERVER=db
+      - PROGLOGS=/logs/logs_backup
+    volumes:
+      - proglogs:/logs
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
+  proglogs:

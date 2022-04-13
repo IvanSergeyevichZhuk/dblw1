@@ -1,0 +1,9 @@
+.vscode
+.idea
+venv
+data_orig
+docker_samples
+labs_task
+works
+logs_copy
+logs

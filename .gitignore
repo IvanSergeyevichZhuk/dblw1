@@ -1,0 +1,10 @@
+/.vscode
+/.idea
+/venv
+/data/*.csv
+
+/docker_samples
+/labs_task
+/works
+/logs_copy
+/logs
