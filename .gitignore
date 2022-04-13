@@ -2,7 +2,6 @@
 /.idea
 /venv
 /data/*.csv
-
 /docker_samples
 /labs_task
 /works

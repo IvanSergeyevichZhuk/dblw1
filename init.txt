@@ -1,0 +1,7 @@
+cd <repository-dir>
+
+git init
+git add .
+git commit -m "Add files"
+git remote add sample_lab1 https://github.com/IvanSergeyevichZhuk/dblw1
+git push sample_lab1
